@@ -19,7 +19,6 @@ var AuthMiddleware = &jwt.GinJWTMiddleware{
 	Timeout:    time.Hour * 24,
 	MaxRefresh: time.Hour,
 	Authenticator: func(username string, password string, c *gin.Context) (string, bool) {
-
 		res, err := db.FetchUserCache(username)
 		if err != nil {
 			log.Println("User Cache Do Not Exist", err)
@@ -28,12 +27,10 @@ var AuthMiddleware = &jwt.GinJWTMiddleware{
 				log.Println("fetchUserFromMongo", err)
 			}
 		}
-
 		if res.IsActivated != true {
 			log.Println("GetUser: ", err)
 			return "Please verify your account.", false
 		}
-
 		isOK := CheckPasswordHash(password, res.Password)
 		if isOK {
 			cache, _ := msgpack.Marshal(&res)
@@ -44,6 +41,10 @@ var AuthMiddleware = &jwt.GinJWTMiddleware{
 		// Wrong passwork in cache, fetch user from mongo
 		log.Println(username, "Wrong passwork in cache, fetch user from mongo")
 		res, err = db.FetchUserFromMongo(username)
+		if err != nil {
+			log.Println("fetchUserFromMongo", err)
+		}
+
 		isOK = CheckPasswordHash(password, res.Password)
 
 		if isOK {
@@ -85,6 +86,7 @@ var AuthMiddleware = &jwt.GinJWTMiddleware{
 	// - "header:<name>"
 	// - "query:<name>"
 	// - "cookie:<name>"
+
 	TokenLookup: "header:Authorization",
 	// TokenLookup: "query:token",
 	// TokenLookup: "cookie:token",

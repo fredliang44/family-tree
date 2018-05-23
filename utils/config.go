@@ -1,10 +1,12 @@
 package utils
 
 import (
+	"fmt"
 	"log"
 	"os"
 	"strings"
 
+	"github.com/gin-gonic/gin"
 	"github.com/jinzhu/configor"
 )
 
@@ -19,17 +21,23 @@ type Config struct {
 	}
 
 	Mongo struct {
-		Host      string `default:"127.0.0.1"`
-		Port      string `default:"27017"`
-		SecretKey string `default:"SecretKey"`
-		DB        string `default:"db"`
-		Username  string `default:"username"`
-		Password  string `default:"password"`
+		Host     string `default:"127.0.0.1"`
+		Port     string `default:"27017"`
+		DB       string `default:"db"`
+		Username string `default:"username"`
+		Password string `default:"password"`
 	}
 
 	Dayu struct {
 		AccessID  string `required:"true"`
 		AccessKey string `required:"true"`
+		Sign      string `default:""`
+	}
+
+	QcloudSMS struct {
+		AppID  string `default:""`
+		AppKey string `default:""`
+		Sign   string `default:""`
 	}
 
 	Redis struct {
@@ -48,21 +56,26 @@ type Config struct {
 // LoadConfiguration is a function to load cfg from file
 func LoadConfiguration() Config {
 	path, err := os.Getwd()
+
 	if err != nil {
 		log.Fatalf("[loadAppConfig]: %s\n", err)
 	}
 
-	if os.Getenv("GIN_MODE") == "release" {
+	switch gin.Mode() {
+	case "release":
 		path = strings.Replace(path, "test", "", -1) + "/config.deploy.yml"
-	} else {
-		path = strings.Replace(path, "test", "", -1) + "/config.yml"
+	case "debug":
+		path = strings.Replace(strings.Replace(path, "test", "", -1), "/handler", "", -1) + "/config.yml"
+	case "test":
+		fmt.Println("Start test", gin.Mode())
+		path = strings.Replace(strings.Replace(path, "test", "", -1), "/handler", "", -1) + "/config.yml"
 	}
 
 	var config Config
 	configFile, err := os.Open(path)
 	defer configFile.Close()
 	if err != nil {
-		log.Fatalf("[loadAppConfig]: %s\n", err)
+		log.Printf("[loadAppConfig]: %s\n", err)
 	}
 
 	configor.Load(&config, path)
@@ -73,6 +86,17 @@ func LoadConfiguration() Config {
 	} else {
 		config.Server.SecretKey = string([]byte(config.Server.SecretKey)[:32])
 	}
+
+	if gin.Mode() == "test" {
+		config.Mongo.Host = os.Getenv("MONGO_HOST")
+		config.Mongo.Port = os.Getenv("MONGO_PORT")
+		config.Mongo.Username = os.Getenv("MONGO_USERNAME")
+		config.Mongo.Password = os.Getenv("MONGO_PASSWORD")
+		config.Mongo.DB = os.Getenv("MONGO_DB")
+		config.Root.Username = os.Getenv("ROOT_USERNAME")
+		config.Root.Password = os.Getenv("ROOT_PASSWORD")
+	}
+
 	return config
 }
 

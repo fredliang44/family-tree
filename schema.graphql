@@ -16,7 +16,6 @@ type Query {
 		startYear: Int
 		endYear: Int
 		fromGroupID: Int
-		toGroupID: Int
 		createdTime: String
 	): [Group]
 	company(
@@ -58,7 +57,7 @@ type Mutation {
 		createdTime: String
 		leaderIDs: [Int]
 		fromGroupID: Int
-		toGroupID: int
+		toGroupIDs: [Int]
 		memberIDs: [Int]
 	): Group
 	updateUser(
@@ -70,7 +69,7 @@ type Mutation {
 		avatar: String
 		wechat: String
 		loaction: String
-		inviteCode: String
+		verifyCode: String
 		createdTime: String
 		isGraduate: Boolean
 		isActivated: Boolean
@@ -93,10 +92,11 @@ type User {
 	avatar: String
 	wechat: String
 	loaction: String
-	inviteCode: String
+	verifyCode: String
 	createdTime: String # 2018-05-06 18:49:48.032 +0800 CST
 	isGraduate: Boolean
 	isActivated: Boolean
+	isValidated: Boolean
 	isBasicCompleted: Boolean
 	isAdmin: Boolean
 	abilities: [String]
@@ -114,8 +114,8 @@ type Group {
 	endYear: Int! # 0 stands for up to now
 	createdTime: String! # 2018-05-06 18:49:48.032 +0800 CST
 	leaderIDs: [Int]
-	fromGroupID: Int!
-	toGroupID: int!
+	fromGroupID: Int! # 0 stands for none
+	toGroupIDs: [int]
 	memberIDs: [Int]
 }
 

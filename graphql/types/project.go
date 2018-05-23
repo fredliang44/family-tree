@@ -4,6 +4,7 @@ import (
 	"time"
 )
 
+// Project is a type to transform project data to database
 type Project struct {
 	ID          uint64    `json:"id" bson:"_id,omitempty"`
 	Title       string    `bson:"title" json:"title"`

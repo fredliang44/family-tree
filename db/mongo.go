@@ -9,6 +9,7 @@ import (
 	"log"
 )
 
+// DBSession locate mongo db session
 var DBSession = mongoClient()
 
 func mongoClient() *mgo.Session {
@@ -33,6 +34,7 @@ func mongoClient() *mgo.Session {
 	return session
 }
 
+// FetchUserFromMongo is a func to FetchUserFromMongo
 func FetchUserFromMongo(username string) (user t.User, err error) {
 	var p = bson.M{}
 	var res = t.User{}

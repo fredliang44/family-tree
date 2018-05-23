@@ -8,6 +8,10 @@ import (
 	"github.com/graphql-go/handler"
 )
 
+type contextKey string
+
+var contextKeyUser = contextKey("User")
+
 // Handler is a func to handler graphql requests
 func Handler() gin.HandlerFunc {
 	// Creates a GraphQL-go HTTP handler with the defined schema
@@ -21,6 +25,6 @@ func Handler() gin.HandlerFunc {
 		userID := jwt.ExtractClaims(c)["id"]
 		ctx := c.Request.Context()
 
-		h.ServeHTTP(c.Writer, c.Request.WithContext(context.WithValue(ctx, "User", userID)))
+		h.ServeHTTP(c.Writer, c.Request.WithContext(context.WithValue(ctx, contextKeyUser, userID)))
 	}
 }

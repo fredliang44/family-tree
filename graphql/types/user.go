@@ -4,6 +4,7 @@ import (
 	"time"
 )
 
+// User is a type to transform user data to database
 type User struct {
 	ID               uint64    `json:"id" bson:"_id,omitempty"`
 	Password         string    `bson:"password" json:"password"`
@@ -13,11 +14,12 @@ type User struct {
 	Phone            string    `bson:"phone" json:"phone"`
 	Avatar           string    `bson:"avatar" json:"avatar"`
 	Wechat           string    `bson:"wechat" json:"wechat"`
-	Loaction         string    `bson:"location" json:"location"`
-	InviteCode       string    `bson:"inviteCode" json:"inviteCode"`
-	CreatedTime      time.Time `bson:"createdTime" json:"createdTime"`
+	Location         string    `bson:"location" json:"location"`
+	VerifyCode       string    `bson:"verifyCode" json:"verifyCode"`
+	CreatedTime      time.Time `bson:"createdTime" json:"createdTime"` // Created time
 	IsGraduated      bool      `bson:"isGraduated" json:"isGraduated"`
-	IsActivated      bool      `bson:"isActivated" json:"isActivated"`
+	IsActivated      bool      `bson:"isActivated" json:"isActivated"` // Account was activated via verify code
+	IsValidated      bool      `bson:"isValidated" json:"isValidated"` // Account was validated by admin
 	IsBasicCompleted bool      `bson:"isBasicCompleted" json:"isBasicCompleted"`
 	IsAdmin          bool      `bson:"isAdmin" json:"isAdmin"`
 	Abilities        []string  `bson:"abilities" json:"abilities"`

@@ -1,0 +1,25 @@
+language: go
+
+go:
+  - 1.10.x
+  - 1.9.x
+  - master
+
+env:
+  - DEP_VERSION="0.4.1" GIN_MODE="test"
+
+cache:
+  directories:
+    - $HOME/gopath/src/
+
+before_install:
+  - rm -rf $HOME/gopath/src/family-tree
+  - mv $HOME/gopath/src/github.com/fredliang44/family-tree $HOME/gopath/src/
+  - cd $HOME/gopath/src/family-tree
+  - go get -t ./...
+
+script:
+  - make cov
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)

@@ -15,6 +15,12 @@ mongo:
 dayu:
   accessid: 123546576897865432
   accesskey: 124354645342345463
+  sign: sign # 【sign】+ content
+
+qcloudsms:
+  appid:
+  appkey:
+  sign:
 
 redis:
   host:     127.0.0.1

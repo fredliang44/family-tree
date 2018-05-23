@@ -1,30 +1,51 @@
 package main
 
 import (
+	"family-tree/db"
 	"family-tree/graphql"
 	"family-tree/handler"
 	"family-tree/middleware"
 	"family-tree/utils"
 	"fmt"
-	//"github.com/gin-contrib/cors"
+	"io"
+	"os"
+	"time"
+
+	"github.com/Salvatore-Giordano/gin-redis-ip-limiter"
+	"github.com/ekyoung/gin-nice-recovery"
 	"github.com/gin-gonic/gin"
-	"net/http"
 )
 
 func main() {
 	r := gin.Default()
 
 	// CORS support
-	//r.Use(cors.New(middleware.CORSConfig))
 	r.Use(middleware.CORSMiddleware())
+
+	if gin.Mode() == "release" {
+		// Logging to a file.
+		f, _ := os.Create("server.log")
+		gin.DefaultWriter = io.MultiWriter(f)
+
+		// recovery from internal server error
+		r.Use(nice.Recovery(utils.RecoveryHandler))
+
+		// limit request frequency per minute
+		r.Use(iplimiter.NewRateLimiterMiddleware(db.RedisClient, "general", 200, time.Minute))
+	}
 
 	// AUTH & Login
 	r.POST("/login", middleware.AuthMiddleware.LoginHandler)
-	r.POST("/register", handler.RegisterHandler)
-	r.POST("/code", handler.VerifyCodeHandler)
 
-	// Healthcheck
-	r.GET("/ping", func(c *gin.Context) { c.JSON(http.StatusOK, gin.H{"message": "pong", "code": 200}) })
+	r.POST("/code", handler.GenCode)
+	r.POST("/register_code", handler.GenCode)
+	r.POST("/reset_password_code", handler.GenResetCode)
+
+	r.POST("/register", handler.RegisterHandler)
+	r.POST("/reset", handler.ResetPassword)
+
+	// HealthCheck
+	r.GET("/ping", handler.HealthCheck)
 
 	// Main Handler
 	auth := r.Group("/")
@@ -43,8 +64,9 @@ func main() {
 }
 
 func showStatus() {
-	fmt.Println("\n===================================" +
-		"\nAPP         : " + utils.AppConfig.APPName +
-		"\nRunning On  : HTTP      " + utils.AppConfig.Server.Host + ":" + utils.AppConfig.Server.Port +
-		"\n===================================")
+	fmt.Println(
+		"\n===================================" +
+			"\nAPP         : " + utils.AppConfig.APPName +
+			"\nRunning On  : HTTP      " + utils.AppConfig.Server.Host + ":" + utils.AppConfig.Server.Port +
+			"\n===================================")
 }

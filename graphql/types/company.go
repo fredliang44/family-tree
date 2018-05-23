@@ -1,5 +1,6 @@
 package types
 
+// Company is a type to transform company data to database
 type Company struct {
 	ID          uint64   `json:"id" bson:"_id,omitempty"`
 	Name        string   `bson:"name" json:"name"`
