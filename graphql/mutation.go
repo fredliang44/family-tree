@@ -35,9 +35,16 @@ var addGroup = graphql.Field{
 	Description: "Add group",
 	Type:        graphql.NewNonNull(groupType),
 	Args: graphql.FieldConfigArgument{
-		"groupName": &graphql.ArgumentConfig{Type: graphql.String},
-		"startYear": &graphql.ArgumentConfig{Type: graphql.Int},
-		"endYear":   &graphql.ArgumentConfig{Type: graphql.Int},
+		"groupName":   &graphql.ArgumentConfig{Type: graphql.String},
+		"startYear":   &graphql.ArgumentConfig{Type: graphql.Int},
+		"endYear":     &graphql.ArgumentConfig{Type: graphql.Int},
+		"fromGroupID": &graphql.ArgumentConfig{Type: graphql.Int},
+		"leaderIDs": &graphql.ArgumentConfig{
+			Type: graphql.NewList(graphql.Int),
+		},
+		"toGroupIDs": &graphql.ArgumentConfig{
+			Type: graphql.NewList(graphql.Int),
+		},
 		"memberIDs": &graphql.ArgumentConfig{
 			Type: graphql.NewList(graphql.Int),
 		},
@@ -55,7 +62,9 @@ var updateGroup = graphql.Field{
 		"startYear":   &graphql.ArgumentConfig{Type: graphql.Int},
 		"endYear":     &graphql.ArgumentConfig{Type: graphql.Int},
 		"fromGroupID": &graphql.ArgumentConfig{Type: graphql.Int},
-		"toGroupID":   &graphql.ArgumentConfig{Type: graphql.Int},
+		"toGroupIDs": &graphql.ArgumentConfig{
+			Type: graphql.NewList(graphql.Int),
+		},
 		"leaderIDs": &graphql.ArgumentConfig{
 			Type: graphql.NewList(graphql.Int),
 		},

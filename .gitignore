@@ -2,5 +2,10 @@
 *tmp
 scripts/
 family-tree
+vendor
 config.yml
+config.test.yml
 config.deploy.yml
+*.log
+*.html
+coverage.txt

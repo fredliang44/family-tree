@@ -41,7 +41,6 @@ var queryGroup = graphql.Field{
 		"startYear":   &graphql.ArgumentConfig{Type: graphql.Int},
 		"endYear":     &graphql.ArgumentConfig{Type: graphql.Int},
 		"fromGroupID": &graphql.ArgumentConfig{Type: graphql.Int},
-		"toGroupID":   &graphql.ArgumentConfig{Type: graphql.Int},
 	},
 	Resolve: GetGroup,
 }

@@ -80,7 +80,7 @@ func GetGroup(params graphql.ResolveParams) (interface{}, error) {
 
 	groupName, isOK := params.Args["groupName"].(string)
 	if isOK {
-		p["groupNamesername"] = groupName
+		p["groupName"] = groupName
 	}
 	startYear, isOK := params.Args["startYear"].(int)
 	if isOK {
@@ -89,6 +89,10 @@ func GetGroup(params graphql.ResolveParams) (interface{}, error) {
 	endYear, isOK := params.Args["endYear"].(int)
 	if isOK {
 		p["endYear"] = endYear
+	}
+	fromGroupID, isOK := params.Args["fromGroupID"].(uint64)
+	if isOK {
+		p["fromGroupID"] = fromGroupID
 	}
 
 	err := db.DBSession.DB(utils.AppConfig.Mongo.DB).C("group").Find(p).All(&res)
@@ -220,8 +224,30 @@ func AddGroup(params graphql.ResolveParams) (interface{}, error) {
 		res.EndYear = endYear
 	}
 
-	memberIDs, isOK := params.Args["memberIDs"].([]interface{})
+	fromGroupID, isOK := params.Args["fromGroupID"].(uint64)
+	if isOK {
+		res.FromGroupID = fromGroupID
+	}
 
+	leaderIDs, isOK := params.Args["leaderIDs"].([]interface{})
+	if isOK {
+		for i := range leaderIDs {
+			log.Println("leaderIDs[i]", leaderIDs[i])
+			res.LeaderIDs = append(res.LeaderIDs, uint64(leaderIDs[i].(int)))
+		}
+
+	}
+
+	toGroupIDs, isOK := params.Args["toGroupIDs"].([]interface{})
+	if isOK {
+		for i := range toGroupIDs {
+			log.Println("leaderIDs[i]", toGroupIDs[i])
+			res.ToGroupIDs = append(res.ToGroupIDs, uint64(toGroupIDs[i].(int)))
+		}
+
+	}
+
+	memberIDs, isOK := params.Args["memberIDs"].([]interface{})
 	if isOK {
 		for i := range memberIDs {
 			log.Println("memberIDs[i]", memberIDs[i])
@@ -387,14 +413,22 @@ func UpdateGroup(params graphql.ResolveParams) (interface{}, error) {
 	if isOK {
 		p["endYear"] = endYear
 	}
+
 	fromGroupID, isOK := params.Args["fromGroupID"].(uint64)
 	if isOK {
 		p["fromGroupID"] = fromGroupID
 	}
-	toGroupID, isOK := params.Args["toGroupID"].(uint64)
+
+	toGroupID, isOK := params.Args["toGroupID"].([]interface{})
 	if isOK {
-		p["toGroupID"] = toGroupID
+		var tmp = []uint64{}
+		for i := range toGroupID {
+			log.Println("toGroupID[i]", toGroupID[i])
+			tmp = append(tmp, toGroupID[i].(uint64))
+		}
+		p["toGroupID"] = tmp
 	}
+
 	leaderIDs, isOK := params.Args["leaderIDs"].([]interface{})
 	if isOK {
 		var tmp = []uint64{}
@@ -405,14 +439,14 @@ func UpdateGroup(params graphql.ResolveParams) (interface{}, error) {
 		p["leaderIDs"] = tmp
 	}
 
-	userIDs, isOK := params.Args["leaderIDs"].([]interface{})
+	memberIDs, isOK := params.Args["memberIDs"].([]interface{})
 	if isOK {
 		var tmp = []uint64{}
-		for i := range userIDs {
-			log.Println("userIDs[i]", userIDs[i])
-			tmp = append(tmp, userIDs[i].(uint64))
+		for i := range memberIDs {
+			log.Println("memberIDs[i]", memberIDs[i])
+			tmp = append(tmp, memberIDs[i].(uint64))
 		}
-		p["userIDs"] = tmp
+		p["memberIDs"] = tmp
 	}
 
 	// update group
