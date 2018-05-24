@@ -27,7 +27,7 @@ func GenCode(c *gin.Context) {
 	}
 
 	if err != nil {
-		c.JSON(http.StatusConflict, gin.H{"msg": fmt.Sprintln(err), "code": http.StatusConflict})
+		c.JSON(http.StatusBadRequest, gin.H{"msg": fmt.Sprintln(err), "code": http.StatusConflict})
 		return
 	}
 

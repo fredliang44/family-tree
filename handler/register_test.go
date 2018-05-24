@@ -34,7 +34,7 @@ func TestGenCode(t *testing.T) {
 		}).
 		Run(GinEngine(), func(r gofight.HTTPResponse, rq gofight.HTTPRequest) {
 			assert.JSONEq(t, `{"code":409, "msg":"Username exists\n"}`, r.Body.String())
-			assert.Equal(t, http.StatusConflict, r.Code)
+			assert.Equal(t, http.StatusBadRequest, r.Code)
 		})
 
 	r.POST("/register_code").

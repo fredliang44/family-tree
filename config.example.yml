@@ -31,3 +31,6 @@ redis:
 root:
   username: username
   password: password
+
+sentry:
+  sdn: https://xxxxxxxxxxxxxxx@sentry.io/xxxxxxxxxxx

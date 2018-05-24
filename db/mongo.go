@@ -3,6 +3,7 @@ package db
 import (
 	t "family-tree/graphql/types"
 	"family-tree/utils"
+	"github.com/getsentry/raven-go"
 	ai "github.com/night-codes/mgo-ai"
 	"gopkg.in/mgo.v2"
 	"gopkg.in/mgo.v2/bson"
@@ -28,7 +29,8 @@ func mongoClient() *mgo.Session {
 	ai.Connect(session.DB(utils.AppConfig.Mongo.DB).C("company"))
 
 	if err != nil {
-		log.Println("mongoClient", err)
+		raven.CaptureErrorAndWait(err, nil)
+		log.Panic("mongoClient", err)
 	}
 
 	return session

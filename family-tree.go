@@ -13,8 +13,15 @@ import (
 
 	"github.com/Salvatore-Giordano/gin-redis-ip-limiter"
 	"github.com/ekyoung/gin-nice-recovery"
+	"github.com/getsentry/raven-go"
 	"github.com/gin-gonic/gin"
 )
+
+func init() {
+	if sdn := utils.AppConfig.Sentry.SDN; sdn != "" {
+		raven.SetDSN(sdn)
+	}
+}
 
 func main() {
 	r := gin.Default()

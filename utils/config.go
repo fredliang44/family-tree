@@ -6,6 +6,7 @@ import (
 	"os"
 	"strings"
 
+	"github.com/getsentry/raven-go"
 	"github.com/gin-gonic/gin"
 	"github.com/jinzhu/configor"
 )
@@ -51,6 +52,10 @@ type Config struct {
 		Username string `required:"true"`
 		Password string `required:"true"`
 	}
+
+	Sentry struct {
+		SDN string `default:""`
+	}
 }
 
 // LoadConfiguration is a function to load cfg from file
@@ -58,7 +63,8 @@ func LoadConfiguration() Config {
 	path, err := os.Getwd()
 
 	if err != nil {
-		log.Fatalf("[loadAppConfig]: %s\n", err)
+		raven.CaptureErrorAndWait(err, nil)
+		log.Panicf("[loadAppConfig]: %s\n", err)
 	}
 
 	switch gin.Mode() {

@@ -8,6 +8,7 @@ import (
 	"family-tree/utils"
 	"fmt"
 
+	"github.com/getsentry/raven-go"
 	"github.com/graphql-go/graphql"
 	"github.com/night-codes/mgo-ai"
 	"gopkg.in/mgo.v2/bson"
@@ -368,7 +369,9 @@ func UpdateUser(params graphql.ResolveParams) (interface{}, error) {
 		// update user
 		err = db.DBSession.DB(utils.AppConfig.Mongo.DB).C("user").Update(bson.M{"username": username}, p)
 		if err != nil {
+			raven.CaptureError(err, nil)
 			log.Println("Update User: ", err)
+			return res, err
 		}
 
 		// return data
@@ -451,7 +454,9 @@ func UpdateGroup(params graphql.ResolveParams) (interface{}, error) {
 	// update group
 	err = db.DBSession.DB(utils.AppConfig.Mongo.DB).C("group").Update(bson.M{"id": id}, p)
 	if err != nil {
+		raven.CaptureError(err, nil)
 		log.Println("Update Group: ", err)
+		return res, err
 	}
 
 	// return data
@@ -520,7 +525,9 @@ func UpdateCompany(params graphql.ResolveParams) (interface{}, error) {
 	// update company
 	err = db.DBSession.DB(utils.AppConfig.Mongo.DB).C("company").Update(bson.M{"id": id}, p)
 	if err != nil {
+		raven.CaptureError(err, nil)
 		log.Println("Update Company: ", err)
+		return res, err
 	}
 
 	// return data

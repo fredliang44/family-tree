@@ -3,6 +3,7 @@ package db
 import (
 	t "family-tree/graphql/types"
 	"family-tree/utils"
+	"github.com/getsentry/raven-go"
 	"github.com/go-redis/redis"
 	"github.com/vmihailenco/msgpack"
 	"log"
@@ -32,6 +33,7 @@ func FetchUserCache(username string) (user t.User, err error) {
 	resp, _ := RedisClient.Get(username).Bytes()
 	err = msgpack.Unmarshal(resp, &res)
 	if err != nil {
+		raven.CaptureError(err, nil)
 		log.Println("Get User from redis: ", err)
 		res, err = FetchUserFromMongo(username)
 		return res, err

@@ -25,11 +25,12 @@ var AuthMiddleware = &jwt.GinJWTMiddleware{
 			res, err = db.FetchUserFromMongo(username)
 			if err != nil {
 				log.Println("fetchUserFromMongo", err)
+				return "User Do Not Exist", false
 			}
 		}
 		if res.IsActivated != true {
 			log.Println("GetUser: ", err)
-			return "Please verify your account.", false
+			return "Please verify your account", false
 		}
 		isOK := CheckPasswordHash(password, res.Password)
 		if isOK {
@@ -63,10 +64,11 @@ var AuthMiddleware = &jwt.GinJWTMiddleware{
 			res, err = db.FetchUserFromMongo(username)
 			if err != nil {
 				log.Println("fetchUserFromMongo", err)
+				return false
 			}
 		}
 
-		if err != nil || res.Username == "" {
+		if res.Username == "" {
 			log.Println("GetUser: ", err)
 			return false
 		}

@@ -6,6 +6,7 @@ import (
 	"family-tree/utils"
 	"fmt"
 
+	"github.com/getsentry/raven-go"
 	"github.com/graphql-go/graphql"
 	ast "github.com/graphql-go/graphql/language/ast"
 	"gopkg.in/mgo.v2/bson"
@@ -53,6 +54,7 @@ func selectedFieldsFromSelections(params graphql.ResolveParams, selections []ast
 			}
 			sel, err := selectedFieldsFromSelections(params, frag.GetSelectionSet().Selections)
 			if err != nil {
+				raven.CaptureError(err, nil)
 				return nil, err
 			}
 			selected = append(selected, sel...)
