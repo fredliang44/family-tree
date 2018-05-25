@@ -18,7 +18,7 @@ func TestHealthCheck(t *testing.T) {
 	r.GET("/ping").
 		SetDebug(true).
 		Run(GinEngine(), func(r gofight.HTTPResponse, rq gofight.HTTPRequest) {
-			assert.Equal(t, "{\"code\":200,\"message\":\"pong\"}", r.Body.String())
+			assert.JSONEq(t, "{\"code\":200,\"message\":\"pong\"}", r.Body.String())
 			assert.Equal(t, http.StatusOK, r.Code)
 		})
 }

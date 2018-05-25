@@ -6,17 +6,24 @@ import (
 	"family-tree/middleware"
 	"family-tree/utils"
 	"fmt"
-	"math/rand"
-	"net/http"
-	"time"
-
 	"github.com/gin-gonic/gin"
 	"github.com/night-codes/mgo-ai"
 	"gopkg.in/mgo.v2/bson"
 	"gopkg.in/validator.v2"
+	"math/rand"
+	"net/http"
+	"time"
 )
 
-// GenCode is a func to gen request code
+// @Summary Gen Register Code
+// @Description Generate register phone sms auth code
+// @Accept  json
+// @Produce  json
+// @Param 	GenCode body utils.GenCodeReq true "Gen Register Code"
+// @Success 200 {object} utils.StdResp
+// @Failure 400 {object} utils.ErrResp
+// @Router /register_code [post]
+// GenCode is a func to gen register code
 func GenCode(c *gin.Context) {
 	var info register
 	c.BindJSON(&info)
@@ -63,6 +70,14 @@ func GenCode(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{"message": "OK", "code": http.StatusOK})
 }
 
+// @Summary Register
+// @Description Register after verify sms code
+// @Accept  json
+// @Produce  json
+// @Param 	Register body utils.RegisterReq true "Verify Register Code"
+// @Success 200 {object} utils.VerifyResp
+// @Failure 400 {object} utils.ErrResp
+// @Router /register [post]
 // RegisterHandler is a func to verify sms code
 func RegisterHandler(c *gin.Context) {
 	var data register
