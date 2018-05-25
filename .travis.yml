@@ -16,10 +16,11 @@ before_install:
   - rm -rf $HOME/gopath/src/family-tree
   - mv $HOME/gopath/src/github.com/fredliang44/family-tree $HOME/gopath/src/
   - cd $HOME/gopath/src/family-tree
+  - go get github.com/swaggo/swag/cmd/swag
+  - swag init
   - go get -t ./...
 
 script:
-  - swag init
   - make cov
 
 after_success:

@@ -4,7 +4,7 @@ scripts/
 family-tree
 main
 vendor
-docs/swagger
+docs
 config.yml
 config.test.yml
 config.deploy.yml
