@@ -11,6 +11,13 @@ import (
 	"time"
 )
 
+// @Summary InitDB
+// @Description InitDB for unit test
+// @Accept  json
+// @Produce  json
+// @Security ApiKeyAuth
+// @Success 200 {object} utils.StdResp
+// @Router /init_db [get]
 // InitDB is a func to init db for unit test
 func InitDB(c *gin.Context) {
 	db.DBSession.DB(utils.AppConfig.Mongo.DB).C("user").RemoveAll(nil)
@@ -33,5 +40,5 @@ func InitDB(c *gin.Context) {
 	user.ID = ai.Next("user")
 	db.DBSession.DB(utils.AppConfig.Mongo.DB).C("user").Insert(user)
 
-	c.JSON(http.StatusOK, gin.H{"message": "OK", "code": http.StatusOK})
+	c.JSON(http.StatusOK, utils.StdResp{Message: "OK", Code: http.StatusOK})
 }

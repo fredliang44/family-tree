@@ -13,7 +13,7 @@ func TestInitDB(t *testing.T) {
 	r.GET("/init_db").
 		SetDebug(true).
 		Run(GinEngine(), func(r gofight.HTTPResponse, rq gofight.HTTPRequest) {
-			assert.Equal(t, "{\"code\":200,\"message\":\"OK\"}", r.Body.String())
+			assert.JSONEq(t, "{\"code\":200,\"message\":\"OK\"}", r.Body.String())
 			assert.Equal(t, http.StatusOK, r.Code)
 		})
 
