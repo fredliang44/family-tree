@@ -19,6 +19,7 @@ before_install:
   - go get -t ./...
 
 script:
+  - swag init
   - make cov
 
 after_success:

@@ -15,6 +15,14 @@ import (
 	"net/http"
 )
 
+// @Summary Gen Reset Code
+// @Description Generate register phone sms auth code
+// @Accept  json
+// @Produce  json
+// @Param 	GenResetCode body utils.GenResetCodeReq true "Gen Reset Code"
+// @Success 200 {object} utils.StdResp
+// @Failure 400 {object} utils.ErrResp
+// @Router /reset_password_code [post]
 // GenResetCode is a func to handler register request
 func GenResetCode(c *gin.Context) {
 	var info register
@@ -51,6 +59,14 @@ func GenResetCode(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{"message": "OK", "code": http.StatusOK})
 }
 
+// @Summary Reset Password
+// @Description Phrase reset password request
+// @Accept  json
+// @Produce  json
+// @Param 	ResetPassword body utils.ResetReq true "Verify Reset Code"
+// @Success 200 {object} utils.VerifyResp
+// @Failure 400 {object} utils.ErrResp
+// @Router /reset [post]
 // ResetPassword is a func to verify sms code
 func ResetPassword(c *gin.Context) {
 	var info register

@@ -2,10 +2,13 @@
 *tmp
 scripts/
 family-tree
+main
 vendor
+docs/swagger
 config.yml
 config.test.yml
 config.deploy.yml
 *.log
 *.html
 coverage.txt
+

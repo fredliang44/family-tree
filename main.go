@@ -2,12 +2,14 @@ package main
 
 import (
 	"family-tree/db"
+	_ "family-tree/docs"
 	"family-tree/graphql"
 	"family-tree/handler"
 	"family-tree/middleware"
 	"family-tree/utils"
 	"fmt"
 	"io"
+	"net/http"
 	"os"
 	"time"
 
@@ -15,8 +17,27 @@ import (
 	"github.com/ekyoung/gin-nice-recovery"
 	"github.com/getsentry/raven-go"
 	"github.com/gin-gonic/gin"
+	"github.com/swaggo/gin-swagger"
+	"github.com/swaggo/gin-swagger/swaggerFiles"
 )
 
+// @title Family Tree API
+// @version 1.0
+// @description This is a Family Tree API server.
+
+// @contact.name Fred Liang
+// @contact.url https://blog.fredliang.cn
+// @contact.email info@fredliang.cn
+
+// @securityDefinitions.apikey ApiKeyAuth
+// @in header
+// @name Authorization
+
+// @license.name Mozilla 2.0
+// @license.url https://github.com/fredliang44/family-tree/blob/master/LICENSE
+
+// @host fmt.fredliang.cn
+// @schemes https
 func init() {
 	if sdn := utils.AppConfig.Sentry.SDN; sdn != "" {
 		raven.SetDSN(sdn)
@@ -62,6 +83,10 @@ func main() {
 		auth.GET("/refresh_token", middleware.AuthMiddleware.RefreshHandler)
 		auth.GET("/init_db", handler.InitDB)
 	}
+
+	// Use ginSwagger gen api doc
+	r.GET("/doc/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
+	r.GET("/", func(c *gin.Context) { c.Redirect(http.StatusPermanentRedirect, "/doc/index.html") })
 
 	// Show Status
 	showStatus()

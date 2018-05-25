@@ -8,6 +8,6 @@ RUN apk --no-cache add tzdata  ca-certificates && \
 WORKDIR /app
 ENV GIN_MODE release
 ADD config.deploy.yml /app/config.deploy.yml
-ADD family-tree /app/family-tree
-RUN chmod +x ./family-tree
-CMD ["./family-tree"]
+ADD main /app/main
+RUN chmod +x ./main
+CMD ["./main"]
