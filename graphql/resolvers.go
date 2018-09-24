@@ -219,7 +219,7 @@ func AddProject(params graphql.ResolveParams) (interface{}, error) {
 	err := db.DBSession.DB(utils.AppConfig.Mongo.DB).C("group").Insert(res)
 	if err != nil {
 		raven.CaptureError(err, nil)
-		log.Println("Add Company: ", err)
+		log.Println("Update Project: ", err)
 	}
 
 	return res, nil
@@ -257,9 +257,13 @@ func AddCompany(params graphql.ResolveParams) (interface{}, error) {
 		res.Images = tmp
 	}
 
-	adminIDs, isOK := params.Args["adminIDs"].(int)
+	adminIDs, isOK := params.Args["adminIDs"].([]interface{})
 	if isOK {
-		res.AdminIDs = uint64(adminIDs)
+		for i := range adminIDs {
+			log.Println("adminIDs[i]", adminIDs[i])
+			res.MemberIDs = append(res.MemberIDs, uint64(adminIDs[i].(int)))
+		}
+
 	}
 
 	memberIDs, isOK := params.Args["memberIDs"].([]interface{})
@@ -373,7 +377,7 @@ func UpdateUser(params graphql.ResolveParams) (interface{}, error) {
 		return nil, err
 	}
 
-	if params.Context.Value("User") == username {
+	if params.Context.Value("User").(string) == username {
 		// load data
 		id, isOK := params.Args["id"].(bson.ObjectId)
 		if isOK {
@@ -560,7 +564,13 @@ func UpdateCompany(params graphql.ResolveParams) (interface{}, error) {
 	}
 
 	// check user exist
-	err := db.DBSession.DB(utils.AppConfig.Mongo.DB).C("company").Find(p).One(&p)
+	err := db.DBSession.DB(utils.AppConfig.Mongo.DB).C("company").Find(p).One(&res)
+
+	// TODO Test Contains()
+	userID, err := db.FetchUserIDByUsername(params.Context.Value("User").(string))
+	if !utils.Contains(res.AdminIDs, userID) && !db.CheckAdminByUsername(params.Context.Value("User").(string)) {
+		return nil, errors.New("you have no permission to edit this project")
+	}
 
 	if err != nil {
 		raven.CaptureError(err, nil)
@@ -624,4 +634,10 @@ func UpdateCompany(params graphql.ResolveParams) (interface{}, error) {
 	bson.Unmarshal(bsonBytes, &res)
 	return res, nil
 
+}
+
+// TODO
+// UpdateProject is a graphql resolver to update project info
+func UpdateProject(params graphql.ResolveParams) (interface{}, error) {
+	return nil, nil
 }

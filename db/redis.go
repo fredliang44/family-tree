@@ -1,10 +1,10 @@
 package db
 
 import (
-	"log"
-
 	t "github.com/fredliang44/family-tree/graphql/types"
 	"github.com/fredliang44/family-tree/utils"
+	"log"
+	"time"
 
 	"github.com/go-redis/redis"
 )
@@ -24,7 +24,7 @@ func redisClient() *redis.Client {
 // LoadUserCache is a func to load user data to redis
 func LoadUserCache(user t.User) {
 	//cache, _ := msgpack.Marshal(&user)
-	CacheClient.Set(user.Username, user, -1)
+	CacheClient.Set(user.Username, user, time.Hour*24)
 }
 
 // FetchUserCache is a func to fetch user data from redis
@@ -38,4 +38,31 @@ func FetchUserCache(username string) (user t.User, err error) {
 	}
 
 	return raw.(t.User), nil
+}
+
+// CheckAdminByUsername is a func to Check Admin By Username
+func CheckAdminByUsername(username string) (isAdmin bool) {
+
+	cacheIsAdmin, isExist := CacheClient.Get("isAdmin" + username)
+
+	if !isExist {
+		res := checkAdminFromMongo(username)
+		CacheClient.Set("isAdmin"+username, isAdmin, time.Minute)
+		return res
+	}
+
+	return cacheIsAdmin.(bool)
+}
+
+// FetchUserIDByUsername is a func to Fetch UserID By Username
+func FetchUserIDByUsername(username string) (userID uint64, err error) {
+	cacheUserID, isExist := CacheClient.Get("userID" + username)
+
+	if !isExist {
+		userID, err := fetchUserIDFromMongo(username)
+		CacheClient.Set("userID"+username, userID, time.Hour*24)
+		return userID, err
+	}
+
+	return cacheUserID.(uint64), nil
 }

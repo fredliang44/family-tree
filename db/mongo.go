@@ -50,3 +50,31 @@ func FetchUserFromMongo(username string) (user t.User, err error) {
 	}
 	return res, nil
 }
+
+func checkAdminFromMongo(username string) (isAdmin bool) {
+	var p = bson.M{}
+	var res = t.User{}
+
+	p["username"] = username
+	err := DBSession.DB(utils.AppConfig.Mongo.DB).C("user").Find(p).One(&res)
+
+	if err != nil || res.Username == "" {
+		log.Println("GetUser: ", err)
+		return false
+	}
+
+	return res.IsAdmin
+}
+
+func fetchUserIDFromMongo(username string) (userID uint64, err error) {
+	var p = bson.M{}
+	var res = t.User{}
+
+	p["username"] = username
+	err = DBSession.DB(utils.AppConfig.Mongo.DB).C("user").Find(p).One(&res)
+	if err != nil || res.Username == "" {
+		log.Println("GetUser: ", err)
+		return res.ID, err
+	}
+	return res.ID, nil
+}

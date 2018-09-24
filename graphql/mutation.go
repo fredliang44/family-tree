@@ -42,7 +42,6 @@ var addProject = graphql.Field{
 		"adminID":     &graphql.ArgumentConfig{Type: graphql.Int},
 		"github":      &graphql.ArgumentConfig{Type: graphql.String},
 		"logo":        &graphql.ArgumentConfig{Type: graphql.String},
-
 		"images": &graphql.ArgumentConfig{
 			Type: graphql.NewList(graphql.String),
 		},
@@ -150,4 +149,32 @@ var updateCompany = graphql.Field{
 		},
 	},
 	Resolve: UpdateCompany,
+}
+
+var updateProject = graphql.Field{
+	Name:        "Project",
+	Description: "Mutate project",
+	Type:        graphql.NewNonNull(companyType),
+	Args: graphql.FieldConfigArgument{
+		"title":       &graphql.ArgumentConfig{Type: graphql.String},
+		"description": &graphql.ArgumentConfig{Type: graphql.String},
+		"startedTime": &graphql.ArgumentConfig{Type: graphql.String},
+		"endedTime":   &graphql.ArgumentConfig{Type: graphql.String},
+		"adminID":     &graphql.ArgumentConfig{Type: graphql.Int},
+		"github":      &graphql.ArgumentConfig{Type: graphql.String},
+		"logo":        &graphql.ArgumentConfig{Type: graphql.String},
+		"images": &graphql.ArgumentConfig{
+			Type: graphql.NewList(graphql.String),
+		},
+		"files": &graphql.ArgumentConfig{
+			Type: graphql.NewList(graphql.String),
+		},
+		"memberIDs": &graphql.ArgumentConfig{
+			Type: graphql.NewList(graphql.Int),
+		},
+		"roles": &graphql.ArgumentConfig{
+			Type: graphql.NewList(graphql.String),
+		},
+	},
+	Resolve: UpdateProject,
 }
