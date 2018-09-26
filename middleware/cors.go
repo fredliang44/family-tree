@@ -1,35 +1,8 @@
 package middleware
 
 import (
-	"time"
-
-	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 )
-
-// CORSConfig is a middleware to handle CORS request (abandoned)
-var CORSConfig = loadConfig()
-
-func loadConfig() cors.Config {
-	Origins := []string{}
-	if gin.Mode() == "release" {
-		Origins = []string{"*"}
-	} else {
-		Origins = []string{"*"}
-	}
-	config := cors.Config{
-		AllowOrigins:     Origins,
-		AllowMethods:     []string{"GET", "PUT", "OPTIONS", "PATCH"},
-		AllowHeaders:     []string{"Origin", "Content-Type"},
-		ExposeHeaders:    []string{"Content-Length"},
-		AllowCredentials: true,
-		AllowOriginFunc: func(origin string) bool {
-			return true
-		},
-		MaxAge: 12 * time.Hour,
-	}
-	return config
-}
 
 // CORSMiddleware is a func to handler CORS request
 func CORSMiddleware() gin.HandlerFunc {

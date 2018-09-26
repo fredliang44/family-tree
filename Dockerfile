@@ -6,7 +6,7 @@ RUN apk --no-cache add tzdata  ca-certificates && \
     echo "Asia/Shanghai" > /etc/timezone
 
 WORKDIR /app
-ENV GIN_MODE release
+ENV GIN_MODE=release
 ADD config/ /app/config/
 ADD main /app/main
 ADD docs /app/docs/

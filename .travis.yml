@@ -9,14 +9,12 @@ env:
 
 cache:
   directories:
-    - ./vendor
+    - $HOME/gopath/src/
 
 before_install:
   - go mod tidy
-  - go mod vendor
   - go get github.com/swaggo/swag/cmd/swag
   - swag init
-  - go get -t ./...
 
 script:
   - make cov
