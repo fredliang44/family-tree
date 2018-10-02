@@ -44,6 +44,7 @@ github.com/go-openapi/swag v0.0.0-20180825180336-0dc164b7900e h1:JZCuIv/oLvcrgrD
 github.com/go-openapi/swag v0.0.0-20180825180336-0dc164b7900e/go.mod h1:DXUve3Dpr1UfpPtxFw+EFuQ41HhCWZfha5jSVRG7C7I=
 github.com/go-redis/redis v6.14.0+incompatible h1:AMPZkM7PbsJbilelrJUAyC4xQbGROTOLSuDd7fnMXCI=
 github.com/go-redis/redis v6.14.0+incompatible/go.mod h1:NAIEuMOZ/fxfXJIrKDQDz8wamY7mA7PouImQ2Jvg6kA=
+github.com/go-redis/redis v6.14.1+incompatible/go.mod h1:NAIEuMOZ/fxfXJIrKDQDz8wamY7mA7PouImQ2Jvg6kA=
 github.com/golang/protobuf v1.2.0 h1:P3YflyNX/ehuJFLhxviNdFxQPkGK5cDcApsge1SqnvM=
 github.com/golang/protobuf v1.2.0/go.mod h1:6lQm79b+lXiMfvg/cZm0SGofjICqVBUtrP5yJMmIC1U=
 github.com/graphql-go/graphql v0.7.7-0.20180912000844-cc8e9a91d6b8 h1:+FUBGq8u4Hd8ZquyDJFnx4syX5llOvqRKvHLU2jo2G4=
