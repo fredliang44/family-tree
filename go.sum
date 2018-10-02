@@ -40,6 +40,7 @@ github.com/go-openapi/jsonreference v0.0.0-20180825180305-1c6a3fa339f2 h1:SCSDsf
 github.com/go-openapi/jsonreference v0.0.0-20180825180305-1c6a3fa339f2/go.mod h1:W3Z9FmVs9qj+KR4zFKmDPGiLdk1D9Rlm7cyMvf57TTg=
 github.com/go-openapi/spec v0.0.0-20180825180323-f1468acb3b29 h1:gmQAruMelYs25DC76G4Wf5T+gLetCspHUK7JBRc1QI8=
 github.com/go-openapi/spec v0.0.0-20180825180323-f1468acb3b29/go.mod h1:J8+jY1nAiCcj+friV/PDoE1/3eeccG9LYBs0tYvLOWc=
+github.com/go-openapi/swag v0.0.0-20180715190254-becd2f08beaf/go.mod h1:DXUve3Dpr1UfpPtxFw+EFuQ41HhCWZfha5jSVRG7C7I=
 github.com/go-openapi/swag v0.0.0-20180825180336-0dc164b7900e h1:JZCuIv/oLvcrgrD3ER64GYmhI9mcKdeg1hR7S2rCti0=
 github.com/go-openapi/swag v0.0.0-20180825180336-0dc164b7900e/go.mod h1:DXUve3Dpr1UfpPtxFw+EFuQ41HhCWZfha5jSVRG7C7I=
 github.com/go-redis/redis v6.14.0+incompatible h1:AMPZkM7PbsJbilelrJUAyC4xQbGROTOLSuDd7fnMXCI=
