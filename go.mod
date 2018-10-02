@@ -18,7 +18,7 @@ require (
 	github.com/go-errors/errors v1.0.1
 	github.com/go-openapi/jsonpointer v0.0.0-20180825180259-52eb3d4b47c6 // indirect
 	github.com/go-openapi/jsonreference v0.0.0-20180825180305-1c6a3fa339f2 // indirect
-	github.com/go-openapi/spec v0.0.0-20180825180323-f1468acb3b29 // indirect
+	github.com/go-openapi/spec 0.16.0 // indirect
 	github.com/go-openapi/swag v0.0.0-20180825180336-0dc164b7900e // indirect
 	github.com/go-redis/redis v6.14.0+incompatible
 	github.com/graphql-go/graphql v0.7.7-0.20180912000844-cc8e9a91d6b8
