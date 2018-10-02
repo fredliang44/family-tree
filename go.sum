@@ -1,5 +1,6 @@
 github.com/BurntSushi/toml v0.3.0 h1:e1/Ivsx3Z0FVTV0NSOv/aVgbUWyQuzj7DDnFblkRvsY=
 github.com/BurntSushi/toml v0.3.0/go.mod h1:xHWCNGjB5oqiDr8zfno3MHue2Ht5sIBksp03qcyfWMU=
+github.com/BurntSushi/toml v0.3.1/go.mod h1:xHWCNGjB5oqiDr8zfno3MHue2Ht5sIBksp03qcyfWMU=
 github.com/GiterLab/aliyun-sms-go-sdk v0.0.0-20180108012719-fcc9f11de968 h1:qGbrlv8RghDrhjH2cr6ArRT6xvkmTamdoJ2z5GvWVgM=
 github.com/GiterLab/aliyun-sms-go-sdk v0.0.0-20180108012719-fcc9f11de968/go.mod h1:bxG7hkKP+KV5n72UYbQayZB8JcleuD5g7CkFt0oCNEU=
 github.com/GiterLab/urllib v0.0.0-20160731084542-ea0e875f9030 h1:t2zLCO7CXEHgZ+422Kd38XbQVmPsT6chgLSBLap76c0=
