@@ -31,7 +31,7 @@ require (
 	github.com/labstack/gommon v0.2.1 // indirect
 	github.com/mailru/easyjson v0.0.0-20180823135443-60711f1a8329 // indirect
 	github.com/mattn/go-colorable v0.0.9 // indirect
-	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
+	github.com/modern-go/concurrent 1.0.3 // indirect
 	github.com/modern-go/reflect2 v1.0.1 // indirect
 	github.com/night-codes/mgo-ai v0.0.0-20170312044718-437243fe1a70
 	github.com/onsi/ginkgo v1.6.0 // indirect
