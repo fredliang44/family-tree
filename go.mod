@@ -10,7 +10,7 @@ require (
 	github.com/appleboy/gin-jwt v0.0.0-20180917072534-a4d85f559a8d
 	github.com/appleboy/gofight v2.0.0+incompatible
 	github.com/buger/jsonparser v0.0.0-20180808090653-f4dd9f5a6b44 // indirect
-	github.com/certifi/gocertifi v0.0.0-20180118203423-deb3ae2ef261 // indirect
+	github.com/certifi/gocertifi/v2015 2015.11.20 // indirect
 	github.com/ekyoung/gin-nice-recovery v0.0.0-20160510022553-1654dca486db
 	github.com/fsnotify/fsnotify v1.4.7 // indirect
 	github.com/getsentry/raven-go v0.0.0-20180827214142-a9457d81ec91
