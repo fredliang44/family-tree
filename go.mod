@@ -7,7 +7,7 @@ require (
 	github.com/PuerkitoBio/purell v1.1.0 // indirect
 	github.com/PuerkitoBio/urlesc v0.0.0-20170810143723-de5bf2ad4578 // indirect
 	github.com/Salvatore-Giordano/gin-redis-ip-limiter v0.0.0-20180421093006-409a923d7aa8
-	github.com/appleboy/gin-jwt v0.0.0-20180917072534-a4d85f559a8d
+	github.com/appleboy/gin-jwt/v2 v2.5.0
 	github.com/appleboy/gofight v2.0.0+incompatible
 	github.com/buger/jsonparser v0.0.0-20180808090653-f4dd9f5a6b44 // indirect
 	github.com/certifi/gocertifi v0.0.0-20180118203423-deb3ae2ef261 // indirect
