@@ -44,7 +44,7 @@ require (
 	github.com/swaggo/swag v1.3.2
 	github.com/tobyzxj/uuid v0.0.0-20140223123307-aa0153c14395
 	github.com/ugorji/go/codec v0.0.0-20180920200043-2c86ab75771c // indirect
-	github.com/valyala/bytebufferpool v0.0.0-20160817181652-e746df99fe4a // indirect
+	github.com/valyala/bytebufferpool v1.0.0 // indirect
 	github.com/valyala/fasttemplate v0.0.0-20170224212429-dcecefd839c4 // indirect
 	golang.org/x/crypto v0.0.0-20180830192347-182538f80094
 	golang.org/x/net v0.0.0-20180826012351-8a410e7b638d // indirect
