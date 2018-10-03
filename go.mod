@@ -1,7 +1,7 @@
 module github.com/fredliang44/family-tree
 
 require (
-	github.com/BurntSushi/toml v0.3.0 // indirect
+	github.com/BurntSushi/toml v0.3.1 // indirect
 	github.com/GiterLab/aliyun-sms-go-sdk v0.0.0-20180108012719-fcc9f11de968
 	github.com/GiterLab/urllib v0.0.0-20160731084542-ea0e875f9030 // indirect
 	github.com/PuerkitoBio/purell v1.1.0 // indirect
@@ -16,7 +16,7 @@ require (
 	github.com/getsentry/raven-go v0.0.0-20180827214142-a9457d81ec91
 	github.com/gin-gonic/gin v1.3.0
 	github.com/go-errors/errors v1.0.1
-	github.com/go-openapi/jsonpointer v0.0.0-20180825180259-52eb3d4b47c6 // indirect
+	github.com/go-openapi/jsonpointer 0.16.0 // indirect
 	github.com/go-openapi/jsonreference v0.0.0-20180825180305-1c6a3fa339f2 // indirect
 	github.com/go-openapi/spec v0.0.0-20180825180323-f1468acb3b29 // indirect
 	github.com/go-openapi/swag 0.16.0 // indirect
