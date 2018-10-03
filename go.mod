@@ -27,7 +27,7 @@ require (
 	github.com/jinzhu/configor v0.0.0-20180614024415-4edaf76fe188
 	github.com/json-iterator/go v1.1.5 // indirect
 	github.com/kr/pretty v0.1.0 // indirect
-	github.com/labstack/echo v3.2.1+incompatible // indirect
+	github.com/labstack/echo v3.3.6 // indirect
 	github.com/labstack/gommon v0.2.1 // indirect
 	github.com/mailru/easyjson v0.0.0-20180823135443-60711f1a8329 // indirect
 	github.com/mattn/go-colorable v0.0.9 // indirect
