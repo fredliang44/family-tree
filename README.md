@@ -4,6 +4,7 @@
 [![Codecov](https://img.shields.io/codecov/c/github/fredliang44/family-tree.svg?style=flat-square)](https://codecov.io/gh/fredliang44/family-tree)
 [![Go Doc](https://img.shields.io/badge/godoc-reference-blue.svg?style=flat-square)](https://godoc.org/github.com/fredliang44/family-tree)
 [![Go Report Card](https://goreportcard.com/badge/github.com/fredliang44/family-tree?style=flat-square)](https://goreportcard.com/report/github.com/fredliang44/family-tree)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Ffredliang44%2Ffamily-tree.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Ffredliang44%2Ffamily-tree?ref=badge_shield)
 ## 1. Docs
 
 Request|Document
@@ -69,3 +70,6 @@ GraphQL | <https://fmt.fredliang.cn/graphql>
     ├── recovery.go
     └── sms.go           // handle message request with Dayu of Aliyun and Tencent Cloud SMS Service
 ```
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Ffredliang44%2Ffamily-tree.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Ffredliang44%2Ffamily-tree?ref=badge_large)
