@@ -43,7 +43,7 @@ require (
 	github.com/ugorji/go/codec v0.0.0-20180920200043-2c86ab75771c // indirect
 	github.com/valyala/bytebufferpool v1.0.0 // indirect
 	github.com/valyala/fasttemplate v0.0.0-20170224212429-dcecefd839c4 // indirect
-	golang.org/x/crypto v0.0.0-20180830192347-182538f80094
+	golang.org/x/crypto v0.0.0-20181015035922-0c41d7ab0a0e
 	gopkg.in/check.v1 v1.0.0-20180628173108-788fd7840127 // indirect
 	gopkg.in/gin-gonic/gin.v1 v1.3.0 // indirect
 	gopkg.in/go-playground/assert.v1 v1.2.1 // indirect
