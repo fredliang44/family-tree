@@ -12,7 +12,7 @@ require (
 	github.com/buger/jsonparser v0.0.0-20180808090653-f4dd9f5a6b44 // indirect
 	github.com/certifi/gocertifi v0.0.0-20180118203423-deb3ae2ef261 // indirect
 	github.com/ekyoung/gin-nice-recovery v0.0.0-20160510022553-1654dca486db
-	github.com/getsentry/raven-go v0.0.0-20180827214142-a9457d81ec91
+	github.com/getsentry/raven-go v0.0.0-20181018200434-d1aab6ee63f4
 	github.com/gin-gonic/gin v1.3.0
 	github.com/go-errors/errors v1.0.1
 	github.com/go-openapi/jsonpointer v0.0.0-20180322222829-3a0015ad55fa // indirect
