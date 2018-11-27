@@ -10,7 +10,6 @@ import (
 	"github.com/Salvatore-Giordano/gin-redis-ip-limiter"
 	"github.com/ekyoung/gin-nice-recovery"
 	"github.com/fredliang44/family-tree/db"
-	_ "github.com/fredliang44/family-tree/docs"
 	"github.com/fredliang44/family-tree/graphql"
 	"github.com/fredliang44/family-tree/handler"
 	"github.com/fredliang44/family-tree/middleware"
