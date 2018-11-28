@@ -25,10 +25,9 @@ require (
 	github.com/jinzhu/configor v0.0.0-20180614024415-4edaf76fe188
 	github.com/json-iterator/go v1.1.5 // indirect
 	github.com/kr/pretty v0.1.0 // indirect
-	github.com/labstack/echo v3.3.7 // indirect
+	github.com/labstack/echo v0.0.0-20181106020225-2e9f4ea4e010 // indirect
 	github.com/labstack/gommon v0.2.8 // indirect
 	github.com/mailru/easyjson v0.0.0-20180823135443-60711f1a8329 // indirect
-	github.com/mattn/go-colorable v0.0.9 // indirect
 	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
 	github.com/modern-go/reflect2 v1.0.1 // indirect
 	github.com/night-codes/mgo-ai v0.0.0-20170312044718-437243fe1a70
@@ -42,7 +41,6 @@ require (
 	github.com/tobyzxj/uuid v0.0.0-20140223123307-aa0153c14395
 	github.com/ugorji/go/codec v0.0.0-20180920200043-2c86ab75771c // indirect
 	github.com/valyala/bytebufferpool v1.0.0 // indirect
-	github.com/valyala/fasttemplate v0.0.0-20170224212429-dcecefd839c4 // indirect
 	golang.org/x/crypto v0.0.0-20180830192347-182538f80094
 	gopkg.in/check.v1 v1.0.0-20180628173108-788fd7840127 // indirect
 	gopkg.in/gin-gonic/gin.v1 v1.3.0 // indirect
