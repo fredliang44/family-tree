@@ -105,6 +105,7 @@ github.com/swaggo/gin-swagger v1.0.0 h1:k6Nn1jV49u+SNIWt7kejQS/iENZKZVMCNQrKOYat
 github.com/swaggo/gin-swagger v1.0.0/go.mod h1:Mt37wE46iUaTAOv+HSnHbJYssKGqbS25X19lNF4YpBo=
 github.com/swaggo/swag v1.3.2 h1:pR137hlBoouh2OWd//4F7xchfCXC1ry6yGFbxEjM9d4=
 github.com/swaggo/swag v1.3.2/go.mod h1:hog2WgeMOrQ/LvQ+o1YGTeT+vWVrbi0SiIslBtxKTyM=
+github.com/swaggo/swag v1.4.0/go.mod h1:hog2WgeMOrQ/LvQ+o1YGTeT+vWVrbi0SiIslBtxKTyM=
 github.com/tidwall/gjson v1.1.3 h1:u4mspaByxY+Qk4U1QYYVzGFI8qxN/3jtEV0ZDb2vRic=
 github.com/tidwall/gjson v1.1.3/go.mod h1:c/nTNbUr0E0OrXEhq1pwa8iEgc2DOt4ZZqAt1HtCkPA=
 github.com/tidwall/match v0.0.0-20171002075945-1731857f09b1 h1:pWIN9LOlFRCJFqWIOEbHLvY0WWJddsjH2FQ6N0HKZdU=
