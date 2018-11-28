@@ -32,7 +32,7 @@ require (
 	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
 	github.com/modern-go/reflect2 v1.0.1 // indirect
 	github.com/night-codes/mgo-ai v0.0.0-20170312044718-437243fe1a70
-	github.com/onsi/gomega v1.4.2 // indirect
+	github.com/onsi/gomega v1.4.3 // indirect
 	github.com/patrickmn/go-cache v2.1.0+incompatible
 	github.com/pkg/errors v0.8.0 // indirect
 	github.com/qichengzx/qcloudsms_go v0.0.0-20180821055045-643be1bf9ad6
