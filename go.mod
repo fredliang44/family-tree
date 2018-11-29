@@ -10,9 +10,9 @@ require (
 	github.com/appleboy/gin-jwt v0.0.0-20180917072534-a4d85f559a8d
 	github.com/appleboy/gofight v2.0.0+incompatible
 	github.com/buger/jsonparser v0.0.0-20180808090653-f4dd9f5a6b44 // indirect
-	github.com/certifi/gocertifi v0.0.0-20180118203423-deb3ae2ef261 // indirect
+	github.com/certifi/gocertifi v0.0.0-20181122090123-ee1a9a0726d2 // indirect
 	github.com/ekyoung/gin-nice-recovery v0.0.0-20160510022553-1654dca486db
-	github.com/getsentry/raven-go v0.1.0
+	github.com/getsentry/raven-go v0.1.1
 	github.com/gin-gonic/gin v1.3.0
 	github.com/go-errors/errors v1.0.1
 	github.com/go-openapi/jsonpointer v0.0.0-20180322222829-3a0015ad55fa // indirect
@@ -25,23 +25,22 @@ require (
 	github.com/jinzhu/configor v0.0.0-20180614024415-4edaf76fe188
 	github.com/json-iterator/go v1.1.5 // indirect
 	github.com/kr/pretty v0.1.0 // indirect
-	github.com/labstack/echo v0.0.0-20181106020225-2e9f4ea4e010 // indirect
+	github.com/labstack/echo v0.0.0-20181123063703-c7eb8da9ec73 // indirect
 	github.com/labstack/gommon v0.2.8 // indirect
 	github.com/mailru/easyjson v0.0.0-20180823135443-60711f1a8329 // indirect
 	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
 	github.com/modern-go/reflect2 v1.0.1 // indirect
 	github.com/night-codes/mgo-ai v0.0.0-20170312044718-437243fe1a70
-	github.com/onsi/gomega v1.4.2 // indirect
+	github.com/onsi/gomega v1.4.3 // indirect
 	github.com/patrickmn/go-cache v2.1.0+incompatible
 	github.com/pkg/errors v0.8.0 // indirect
 	github.com/qichengzx/qcloudsms_go v0.0.0-20180821055045-643be1bf9ad6
 	github.com/stretchr/testify v1.2.2
 	github.com/swaggo/gin-swagger v1.0.0
-	github.com/swaggo/swag v1.3.2
+	github.com/swaggo/swag v1.4.0
 	github.com/tobyzxj/uuid v0.0.0-20140223123307-aa0153c14395
 	github.com/ugorji/go/codec v0.0.0-20180920200043-2c86ab75771c // indirect
-	github.com/valyala/bytebufferpool v1.0.0 // indirect
-	golang.org/x/crypto v0.0.0-20180830192347-182538f80094
+	golang.org/x/crypto v0.0.0-20181128133537-eb0de9b17e85
 	gopkg.in/check.v1 v1.0.0-20180628173108-788fd7840127 // indirect
 	gopkg.in/gin-gonic/gin.v1 v1.3.0 // indirect
 	gopkg.in/go-playground/assert.v1 v1.2.1 // indirect

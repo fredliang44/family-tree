@@ -1,0 +1,7 @@
+# https://github.com/golangci/golangci/wiki/Configuration
+
+service:
+    prepare:
+        - GO111MODULE=on go mod vendor
+        - GO111MODULE=on go get github.com/swaggo/swag/cmd/swag
+        - swag init
