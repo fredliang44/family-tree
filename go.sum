@@ -54,6 +54,7 @@ github.com/golang/protobuf v1.2.0 h1:P3YflyNX/ehuJFLhxviNdFxQPkGK5cDcApsge1SqnvM
 github.com/golang/protobuf v1.2.0/go.mod h1:6lQm79b+lXiMfvg/cZm0SGofjICqVBUtrP5yJMmIC1U=
 github.com/graphql-go/graphql v0.7.7-0.20180912000844-cc8e9a91d6b8 h1:+FUBGq8u4Hd8ZquyDJFnx4syX5llOvqRKvHLU2jo2G4=
 github.com/graphql-go/graphql v0.7.7-0.20180912000844-cc8e9a91d6b8/go.mod h1:k6yrAYQaSP59DC5UVxbgxESlmVyojThKdORUqGDGmrI=
+github.com/graphql-go/graphql v0.7.7/go.mod h1:k6yrAYQaSP59DC5UVxbgxESlmVyojThKdORUqGDGmrI=
 github.com/graphql-go/handler v0.2.2-0.20180922162246-83cde2468fa5 h1:br+PXgQU2ohUCZSb179Hk6MmBa3IVUmwWvh/0ULTe1s=
 github.com/graphql-go/handler v0.2.2-0.20180922162246-83cde2468fa5/go.mod h1:leLF6RpV5uZMN1CdImAxuiayrYYhOk33bZciaUGaXeU=
 github.com/graphql-go/handler v0.2.2/go.mod h1:leLF6RpV5uZMN1CdImAxuiayrYYhOk33bZciaUGaXeU=
