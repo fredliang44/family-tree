@@ -34,7 +34,7 @@ require (
 	github.com/onsi/gomega v1.4.3 // indirect
 	github.com/patrickmn/go-cache v2.1.0+incompatible
 	github.com/pkg/errors v0.8.0 // indirect
-	github.com/qichengzx/qcloudsms_go v0.0.0-20180821055045-643be1bf9ad6
+	github.com/qichengzx/qcloudsms_go v0.0.0-20181211045637-60059c9fe8f0
 	github.com/stretchr/testify v1.2.2
 	github.com/swaggo/gin-swagger v1.0.0
 	github.com/swaggo/swag v1.4.0
