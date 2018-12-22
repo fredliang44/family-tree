@@ -47,6 +47,7 @@ github.com/go-openapi/jsonpointer v0.18.0/go.mod h1:cOnomiV+CVVwFLk0A/MExoFMjwds
 github.com/go-openapi/jsonreference v0.0.0-20180825180305-1c6a3fa339f2 h1:SCSDsfSBHjjBj1FnK1j35fa1ka4SNuhp0ZZZMxVd9sk=
 github.com/go-openapi/jsonreference v0.0.0-20180825180305-1c6a3fa339f2/go.mod h1:W3Z9FmVs9qj+KR4zFKmDPGiLdk1D9Rlm7cyMvf57TTg=
 github.com/go-openapi/jsonreference v0.17.0/go.mod h1:g4xxGn04lDIRh0GJb5QlpE3HfopLOL6uZrK/VgnsK9I=
+github.com/go-openapi/jsonreference v0.18.0/go.mod h1:g4xxGn04lDIRh0GJb5QlpE3HfopLOL6uZrK/VgnsK9I=
 github.com/go-openapi/spec v0.0.0-20180801175345-384415f06ee2 h1:D9BfbclVKVcfluusYmw6Z2/O74y41shNFpN5jbbcbSs=
 github.com/go-openapi/spec v0.0.0-20180801175345-384415f06ee2/go.mod h1:J8+jY1nAiCcj+friV/PDoE1/3eeccG9LYBs0tYvLOWc=
 github.com/go-openapi/spec v0.18.0/go.mod h1:XkF/MOi14NmjsfZ8VtAKf8pIlbZzyoTvZsdfssdxcBI=
