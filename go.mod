@@ -15,7 +15,7 @@ require (
 	github.com/getsentry/raven-go v0.2.0
 	github.com/gin-gonic/gin v1.3.0
 	github.com/go-errors/errors v1.0.1
-	github.com/go-openapi/jsonpointer v0.0.0-20180322222829-3a0015ad55fa // indirect
+	github.com/go-openapi/jsonpointer v0.18.0 // indirect
 	github.com/go-openapi/jsonreference v0.0.0-20180825180305-1c6a3fa339f2 // indirect
 	github.com/go-openapi/spec v0.0.0-20180801175345-384415f06ee2 // indirect
 	github.com/go-openapi/swag v0.0.0-20180825180336-0dc164b7900e // indirect
