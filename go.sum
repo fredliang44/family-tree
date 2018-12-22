@@ -42,12 +42,14 @@ github.com/go-errors/errors v1.0.1 h1:LUHzmkK3GUKUrL/1gfBUxAHzcev3apQlezX/+O7ma6
 github.com/go-errors/errors v1.0.1/go.mod h1:f4zRHt4oKfwPJE5k8C9vpYG+aDHdBFUsgrm6/TyX73Q=
 github.com/go-openapi/jsonpointer v0.0.0-20180322222829-3a0015ad55fa h1:hr8WVDjg4JKtQptZpzyb196TmruCs7PIsdJz8KAOZp8=
 github.com/go-openapi/jsonpointer v0.0.0-20180322222829-3a0015ad55fa/go.mod h1:+35s3my2LFTysnkMfxsJBAMHj/DoqoB9knIWoYG/Vk0=
+github.com/go-openapi/jsonpointer v0.18.0/go.mod h1:cOnomiV+CVVwFLk0A/MExoFMjwdsUdVpsRhURCKh+3M=
 github.com/go-openapi/jsonreference v0.0.0-20180825180305-1c6a3fa339f2 h1:SCSDsfSBHjjBj1FnK1j35fa1ka4SNuhp0ZZZMxVd9sk=
 github.com/go-openapi/jsonreference v0.0.0-20180825180305-1c6a3fa339f2/go.mod h1:W3Z9FmVs9qj+KR4zFKmDPGiLdk1D9Rlm7cyMvf57TTg=
 github.com/go-openapi/spec v0.0.0-20180801175345-384415f06ee2 h1:D9BfbclVKVcfluusYmw6Z2/O74y41shNFpN5jbbcbSs=
 github.com/go-openapi/spec v0.0.0-20180801175345-384415f06ee2/go.mod h1:J8+jY1nAiCcj+friV/PDoE1/3eeccG9LYBs0tYvLOWc=
 github.com/go-openapi/swag v0.0.0-20180825180336-0dc164b7900e h1:JZCuIv/oLvcrgrD3ER64GYmhI9mcKdeg1hR7S2rCti0=
 github.com/go-openapi/swag v0.0.0-20180825180336-0dc164b7900e/go.mod h1:DXUve3Dpr1UfpPtxFw+EFuQ41HhCWZfha5jSVRG7C7I=
+github.com/go-openapi/swag v0.17.0/go.mod h1:AByQ+nYG6gQg71GINrmuDXCPWdL640yX49/kXLo40Tg=
 github.com/go-redis/redis v6.14.1+incompatible h1:kSJohAREGMr344uMa8PzuIg5OU6ylCbyDkWkkNOfEik=
 github.com/go-redis/redis v6.14.1+incompatible/go.mod h1:NAIEuMOZ/fxfXJIrKDQDz8wamY7mA7PouImQ2Jvg6kA=
 github.com/golang/protobuf v1.2.0 h1:P3YflyNX/ehuJFLhxviNdFxQPkGK5cDcApsge1SqnvM=
