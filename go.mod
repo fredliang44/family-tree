@@ -18,7 +18,7 @@ require (
 	github.com/go-openapi/jsonpointer v0.18.0 // indirect
 	github.com/go-openapi/jsonreference v0.0.0-20180825180305-1c6a3fa339f2 // indirect
 	github.com/go-openapi/spec v0.18.0 // indirect
-	github.com/go-openapi/swag v0.0.0-20180825180336-0dc164b7900e // indirect
+	github.com/go-openapi/swag v0.18.0 // indirect
 	github.com/go-redis/redis v6.14.1+incompatible
 	github.com/graphql-go/graphql v0.7.7
 	github.com/graphql-go/handler v0.2.2
