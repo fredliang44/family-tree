@@ -40,7 +40,7 @@ require (
 	github.com/swaggo/swag v1.4.0
 	github.com/tobyzxj/uuid v0.0.0-20140223123307-aa0153c14395
 	github.com/ugorji/go/codec v0.0.0-20180920200043-2c86ab75771c // indirect
-	golang.org/x/crypto v0.0.0-20190102185935-8d7daa0c54b3
+	golang.org/x/crypto v0.0.0-20190122034524-64072686203f
 	gopkg.in/check.v1 v1.0.0-20180628173108-788fd7840127 // indirect
 	gopkg.in/gin-gonic/gin.v1 v1.3.0 // indirect
 	gopkg.in/go-playground/assert.v1 v1.2.1 // indirect
