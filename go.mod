@@ -39,7 +39,7 @@ require (
 	github.com/swaggo/gin-swagger v1.0.0
 	github.com/swaggo/swag v1.4.0
 	github.com/tobyzxj/uuid v0.0.0-20140223123307-aa0153c14395
-	github.com/ugorji/go/codec v0.0.0-20180920200043-2c86ab75771c // indirect
+	github.com/ugorji/go/codec v1.1.2 // indirect
 	golang.org/x/crypto v0.0.0-20190123115303-057139ce5d2b
 	gopkg.in/check.v1 v1.0.0-20180628173108-788fd7840127 // indirect
 	gopkg.in/gin-gonic/gin.v1 v1.3.0 // indirect
