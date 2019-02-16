@@ -4,7 +4,7 @@ require (
 	github.com/BurntSushi/toml v0.3.1 // indirect
 	github.com/GiterLab/aliyun-sms-go-sdk v0.0.0-20180108012719-fcc9f11de968
 	github.com/GiterLab/urllib v0.0.0-20160731084542-ea0e875f9030 // indirect
-	github.com/PuerkitoBio/purell v1.1.0 // indirect
+	github.com/PuerkitoBio/purell v1.1.1 // indirect
 	github.com/PuerkitoBio/urlesc v0.0.0-20170810143723-de5bf2ad4578 // indirect
 	github.com/Salvatore-Giordano/gin-redis-ip-limiter v0.0.0-20180421093006-409a923d7aa8
 	github.com/appleboy/gin-jwt v0.0.0-20180917072534-a4d85f559a8d

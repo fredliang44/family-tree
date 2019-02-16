@@ -6,6 +6,7 @@ github.com/GiterLab/urllib v0.0.0-20160731084542-ea0e875f9030 h1:t2zLCO7CXEHgZ+4
 github.com/GiterLab/urllib v0.0.0-20160731084542-ea0e875f9030/go.mod h1:gCvDzPdab30Mc4WdKBWH1jbw77YLSNLr0hlFty7hGzo=
 github.com/PuerkitoBio/purell v1.1.0 h1:rmGxhojJlM0tuKtfdvliR84CFHljx9ag64t2xmVkjK4=
 github.com/PuerkitoBio/purell v1.1.0/go.mod h1:c11w/QuzBsJSee3cPx9rAFu61PvFxuPbtSwDGJws/X0=
+github.com/PuerkitoBio/purell v1.1.1/go.mod h1:c11w/QuzBsJSee3cPx9rAFu61PvFxuPbtSwDGJws/X0=
 github.com/PuerkitoBio/urlesc v0.0.0-20170810143723-de5bf2ad4578 h1:d+Bc7a5rLufV/sSk/8dngufqelfh6jnri85riMAaF/M=
 github.com/PuerkitoBio/urlesc v0.0.0-20170810143723-de5bf2ad4578/go.mod h1:uGdkoq3SwY9Y+13GIhn11/XLaGBb4BfwItxLd5jeuXE=
 github.com/Salvatore-Giordano/gin-redis-ip-limiter v0.0.0-20180421093006-409a923d7aa8 h1:b21zQgmma8jQDoLBPd6RbzhniuneXgJgn0FpZRCYk3o=
