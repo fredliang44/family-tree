@@ -22,7 +22,7 @@ require (
 	github.com/go-redis/redis v6.15.1
 	github.com/graphql-go/graphql v0.7.7
 	github.com/graphql-go/handler v0.2.3
-	github.com/jinzhu/configor v0.0.0-20180614024415-4edaf76fe188
+	github.com/jinzhu/configor v1.0.0
 	github.com/json-iterator/go v1.1.5 // indirect
 	github.com/kr/pretty v0.1.0 // indirect
 	github.com/labstack/echo/v4 v4.0.0 // indirect
