@@ -33,7 +33,7 @@ require (
 	github.com/night-codes/mgo-ai v0.0.0-20170312044718-437243fe1a70
 	github.com/onsi/gomega v1.4.3 // indirect
 	github.com/patrickmn/go-cache v2.1.0+incompatible
-	github.com/pkg/errors v0.8.0 // indirect
+	github.com/pkg/errors v0.8.1 // indirect
 	github.com/qichengzx/qcloudsms_go v0.0.0-20181211045637-60059c9fe8f0
 	github.com/stretchr/testify v1.2.2
 	github.com/swaggo/gin-swagger v1.0.0
