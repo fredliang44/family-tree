@@ -36,7 +36,7 @@ require (
 	github.com/pkg/errors v0.8.0 // indirect
 	github.com/qichengzx/qcloudsms_go v0.0.0-20181211045637-60059c9fe8f0
 	github.com/stretchr/testify v1.2.2
-	github.com/swaggo/gin-swagger v1.0.0
+	github.com/swaggo/gin-swagger v1.1.0
 	github.com/swaggo/swag v1.4.0
 	github.com/tobyzxj/uuid v0.0.0-20140223123307-aa0153c14395
 	github.com/ugorji/go/codec v0.0.0-20180920200043-2c86ab75771c // indirect
