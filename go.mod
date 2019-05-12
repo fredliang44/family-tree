@@ -42,7 +42,7 @@ require (
 	github.com/ugorji/go/codec v0.0.0-20180920200043-2c86ab75771c // indirect
 	golang.org/x/crypto v0.0.0-20190211195118-74369b46fc67
 	gopkg.in/check.v1 v1.0.0-20180628173108-788fd7840127 // indirect
-	gopkg.in/gin-gonic/gin.v1 v1.3.0 // indirect
+	gopkg.in/gin-gonic/gin.v1 v1.4.0 // indirect
 	gopkg.in/go-playground/assert.v1 v1.2.1 // indirect
 	gopkg.in/mgo.v2 v2.0.0-20180705113604-9856a29383ce
 	gopkg.in/validator.v2 v2.0.0-20180514200540-135c24b11c19
