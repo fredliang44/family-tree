@@ -13,7 +13,7 @@ require (
 	github.com/certifi/gocertifi v0.0.0-20181122090123-ee1a9a0726d2 // indirect
 	github.com/ekyoung/gin-nice-recovery v0.0.0-20160510022553-1654dca486db
 	github.com/getsentry/raven-go v0.2.0
-	github.com/gin-gonic/gin v1.3.0
+	github.com/gin-gonic/gin v1.4.0
 	github.com/go-errors/errors v1.0.1
 	github.com/go-openapi/jsonpointer v0.18.0 // indirect
 	github.com/go-openapi/jsonreference v0.18.0 // indirect
