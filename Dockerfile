@@ -1,4 +1,4 @@
-FROM alpine@sha256:b3dbf31b77fd99d9c08f780ce6f5282aba076d70a513a8be859d8d3a4d0c92b8
+FROM alpine@sha256:769fddc7cc2f0a1c35abb2f91432e8beecf83916c421420e6a6da9f8975464b6
 LABEL maintainer="fredliang"
 
 RUN apk --no-cache add tzdata  ca-certificates && \
