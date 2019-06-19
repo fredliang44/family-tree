@@ -8,7 +8,7 @@ require (
 	github.com/PuerkitoBio/urlesc v0.0.0-20170810143723-de5bf2ad4578 // indirect
 	github.com/Salvatore-Giordano/gin-redis-ip-limiter v0.0.0-20180421093006-409a923d7aa8
 	github.com/appleboy/gin-jwt v0.0.0-20180917072534-a4d85f559a8d
-	github.com/appleboy/gofight v2.0.0+incompatible
+	github.com/appleboy/gofight v2.1.1+incompatible
 	github.com/buger/jsonparser v0.0.0-20180808090653-f4dd9f5a6b44 // indirect
 	github.com/certifi/gocertifi v0.0.0-20181122090123-ee1a9a0726d2 // indirect
 	github.com/ekyoung/gin-nice-recovery v0.0.0-20160510022553-1654dca486db
