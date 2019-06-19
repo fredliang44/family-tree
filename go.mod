@@ -27,7 +27,7 @@ require (
 	github.com/kr/pretty v0.1.0 // indirect
 	github.com/labstack/echo/v4 v4.0.0 // indirect
 	github.com/labstack/gommon v0.2.8 // indirect
-	github.com/mailru/easyjson v0.0.0-20180823135443-60711f1a8329 // indirect
+	github.com/mailru/easyjson v0.0.0-20190619115202-94de47d64c63 // indirect
 	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
 	github.com/modern-go/reflect2 v1.0.1 // indirect
 	github.com/night-codes/mgo-ai v0.0.0-20170312044718-437243fe1a70
