@@ -16,7 +16,7 @@ require (
 	github.com/gin-gonic/gin v1.3.0
 	github.com/go-errors/errors v1.0.1
 	github.com/go-openapi/jsonpointer v0.18.0 // indirect
-	github.com/go-openapi/jsonreference v0.18.0 // indirect
+	github.com/go-openapi/jsonreference v0.19.2 // indirect
 	github.com/go-openapi/spec v0.18.0 // indirect
 	github.com/go-openapi/swag v0.18.0 // indirect
 	github.com/go-redis/redis v6.15.1
